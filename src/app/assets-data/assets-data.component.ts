@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/shared/api.service';
 
@@ -9,7 +8,7 @@ import { ApiService } from 'src/shared/api.service';
 })
 export class AssetsDataComponent implements OnInit {
 url="./assets/img/3.jpg";
-  constructor(private api : ApiService,private http:HttpClient) { }
+  constructor(private api : ApiService) { }
   response:any=[];
   fromAssetsFolder: any;
   fromAssets2Folder: any = [];
