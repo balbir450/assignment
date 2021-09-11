@@ -15,8 +15,7 @@ url="./assets/img/3.jpg";
   fromAssets2Folder: any = [];
   data:any=[];
   ngOnInit(): void {
-  //  this. GetDatas();
-  this.http.get('/assets/path.json/').subscribe((data) => {
+    this.api.getAssetData().subscribe((data) => {
     this.fromAssetsFolder = data;
     this.fromAssets2Folder = this.fromAssetsFolder.users;
     console.log(this.fromAssets2Folder);

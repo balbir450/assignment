@@ -15,4 +15,8 @@ export class ApiService {
     getInfo(){
       return this.http.get(`https://jsonplaceholder.typicode.com/photos/`)
       }
+    
+    getAssetData(){
+      return this.http.get('/assets/path.json/');
     }
+}
