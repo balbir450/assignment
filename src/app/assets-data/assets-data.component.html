@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-text">
+    <a [routerLink] = "['/postdata']">Go Back</a>
+  </span>
+</nav>
+<div class="container">
+  <div class="row">
+    <h1>Assets Data</h1>
+    <strong>These images fetch from Json data in assets folder</strong>
+      <div class="card ml-2" style="width: 18rem;" *ngFor="let res of fromAssets2Folder">
+        <img class="card-img-top" src="{{ res.profile }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Assets Data</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush" >
+          <li class="list-group-item">{{ res.firstName }}</li>
+          <li class="list-group-item">{{res.contact}}</li>
+          <li class="list-group-item">{{res.email}}</li>
+        </ul>
+        <br>
+        <br>
+      </div>
+      <br><br>
+      <strong>This image get from image folder</strong>
+      <br>
+      <div class="mx-auto">
+        <img [src]="url">
+      </div>
+  </div>
+</div>

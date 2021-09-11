@@ -1,0 +1,30 @@
+<h1>Upload Document</h1>
+<form [formGroup]="detailsForm" (ngSubmit)="onSubmit()">
+  <div class="form-outline mb-4 mt-5">
+    <p>
+      <label  class="form-label" for="title">Title</label>
+      <input type="text" id="title" name="title" class="form-control" formControlName="title">
+    </p>
+  </div>
+  <div class="form-outline mb-4">
+    <p>
+      <label class="form-label" for="url">Upload File </label>
+      <input type="file" (change)="onfileChange($event)" formControlName="url" class="form-control">
+    </p>
+  </div>
+  <div class="form-outline mb-4">
+    <p>
+      <label  class="form-label" for="thumbnail_url">Thumbnail_url </label>
+      <input type="file" (change)="onfileChange2($event)" formControlName="thumbnail_url" class="form-control">
+    </p>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Post Data</button>&nbsp;&nbsp;
+    <button type="button" [routerLink]="['/getdata']" class="btn btn-secondary btn-lg btn-block">Get Data</button>&nbsp;&nbsp;
+    <button type="button" [routerLink]="['/assetsdata']"class="btn btn-primary btn-lg btn-block">Assets Data</button>&nbsp;&nbsp;
+  </div>
+</form>
+
+<div class="container">
+  <strong>Image send to the api in the  formData but according to json-placeholder api permit only string data.So we store the image in base64 form</strong>
+</div>

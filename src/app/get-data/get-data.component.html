@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-text">
+    <a [routerLink] = "['/postdata']">Go Back</a>&nbsp;&nbsp;&nbsp;
+    <a [routerLink] = "['/assetsdata']">Next</a>
+  </span>
+</nav>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Url</th>
+      <th scope="col">Thumbnail_url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let res of response;index as i">
+      <td scope="row">{{response[i].id}}</td>
+      <td>{{response[i].title}}</td>
+      <td><img src={{response[i].url}} width="75px" height="75px"></td>
+      <td><img src={{response[i].thumbnailUrl}} width="75px" height="75px"></td>
+    </tr>
+  </tbody>
+</table>
